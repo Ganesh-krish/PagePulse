@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const { parseHtml } = require('../../src/services/parser');
-const cheerio = require('cheerio');
 
 const sampleHtml = fs.readFileSync(path.join(__dirname, '../fixtures/sample-html.html'), 'utf8');
 const malformedHtml = fs.readFileSync(path.join(__dirname, '../fixtures/malformed.html'), 'utf8');

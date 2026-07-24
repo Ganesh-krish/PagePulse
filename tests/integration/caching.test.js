@@ -1,6 +1,5 @@
 const request = require('supertest');
 const app = require('../../src/app');
-const { mockFetcher, mockCache } = require('../utils/testHelpers');
 
 jest.mock('../../src/services/fetcher', () => ({
   fetchUrl: jest.fn(() =>

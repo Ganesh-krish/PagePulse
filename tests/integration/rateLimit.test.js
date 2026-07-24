@@ -1,6 +1,5 @@
 const request = require('supertest');
 const app = require('../../src/app');
-const dns = require('dns');
 
 jest.mock('dns', () => ({
   lookup: jest.fn((hostname, cb) => {

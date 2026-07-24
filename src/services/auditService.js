@@ -75,9 +75,7 @@ async function auditUrl(url, options = {}, requestId) {
     cache.set(url, result);
     return result;
   } catch (err) {
-    if (err.name !== 'FetchError') {
-      err = new FetchError(err.message || 'Audit failed');
-    }
+    const fetchErr = err.name === 'FetchError' ? err : new FetchError(err.message || 'Audit failed');
     return {
       url,
       auditedAt: new Date().toISOString(),
@@ -85,7 +83,7 @@ async function auditUrl(url, options = {}, requestId) {
       fetchStatus: 'error',
       fetchStatusCode: null,
       fetchResponseTimeMs: null,
-      error: err.message,
+      error: fetchErr.message,
       data: null,
     };
   } finally {

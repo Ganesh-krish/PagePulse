@@ -43,7 +43,7 @@ async function resolveAndCheck(hostname) {
   }
 }
 
-async function fetchUrl(url, options = {}, requestId) {
+async function fetchUrl(url, options = {}, _requestId) {
   const timeout = options.timeout || config.fetchTimeoutMs;
   const maxRedirects = options.maxRedirects ?? 5;
 

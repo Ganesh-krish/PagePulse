@@ -7,7 +7,7 @@ const logger = pino({
   level: isProduction ? 'info' : 'debug',
   formatters: {
     bindings: (bindings) => {
-      const { pid, hostname, ...rest } = bindings;
+      const { pid: _pid, hostname: _hostname, ...rest } = bindings;
       return rest;
     },
   },

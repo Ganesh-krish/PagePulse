@@ -8,8 +8,11 @@
     "ecmaVersion": 2021,
     "sourceType": "module"
   },
+  "globals": {
+    "Promise": "readonly"
+  },
   "rules": {
-    "no-unused-vars": "warn",
+    "no-unused-vars": ["warn", { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }],
     "no-console": "off"
   }
 }

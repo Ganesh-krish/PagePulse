@@ -6,8 +6,8 @@ const baseLogger = pinoHttp({
   customAttributeKeys: {
     reqId: 'requestId',
   },
-  customSuccessMessage: (req, res) => 'request completed',
-  customErrorMessage: (req, res, error) => 'request completed with error',
+  customSuccessMessage: (_req, _res) => 'request completed',
+  customErrorMessage: (_req, _res, _error) => 'request completed with error',
 });
 
 function requestLogger(req, res, next) {

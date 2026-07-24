@@ -32,7 +32,7 @@ class FetchError extends Error {
   }
 }
 
-function errorHandler(err, req, res, next) {
+function errorHandler(err, req, res, _next) {
   const statusCode = err.statusCode || 500;
   const code = err.code || err.name || 'INTERNAL_SERVER_ERROR';
   const errorResponse = {

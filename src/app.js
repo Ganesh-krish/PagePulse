@@ -1,7 +1,6 @@
 const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
-const logger = require('./config/logger');
 const requestId = require('./middleware/requestId');
 const httpLogger = require('./middleware/requestLogger');
 const errorHandlerModule = require('./middleware/errorHandler');

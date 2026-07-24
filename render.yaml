@@ -1,0 +1,26 @@
+render:
+  type: web
+  name: page-pulse
+  env: node
+  plan: starter
+  buildCommand: npm ci
+  startCommand: npm start
+  envVars:
+    - key: NODE_ENV
+      value: production
+    - key: PORT
+      value: 3000
+    - key: CACHE_TTL
+      value: 300
+    - key: CACHE_MAX
+      value: 100
+    - key: RATE_LIMIT_WINDOW_MS
+      value: 60000
+    - key: RATE_LIMIT_MAX
+      value: 10
+    - key: FETCH_TIMEOUT_MS
+      value: 10000
+    - key: MAX_CONCURRENT_FETCHES
+      value: 5
+  healthCheckPath: /health
+  autoDeploy: true

@@ -7,3 +7,5 @@ dist/
 npm-debug.log*
 .kilo/*
 Module Plans/*
+scale-design/md/*
+DRIVE_README.md

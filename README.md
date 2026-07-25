@@ -161,6 +161,17 @@ docker build -t page-pulse .
 - **Helmet** — Security headers
 - **Jest + Supertest** — Testing
 
+## GitHub Repository
+
+https://github.com/Ganesh-krish/PagePulse
+
+## Assumptions Made
+
+- Single-instance deployment (no multi-pod coordination required for current scale).
+- Cache-only persistence (no database); audit results are idempotent and repeatable.
+- Client IP is used for rate limiting (shared-IP environments like CDNs may require custom key generator).
+- Target URLs return standard HTML; JavaScript-heavy SPAs may not yield accurate metadata.
+
 ## License
 
 MIT

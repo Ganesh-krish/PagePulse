@@ -8,4 +8,6 @@ npm-debug.log*
 .kilo/*
 Module Plans/*
 scale-design/md/*
+api-test.*
+scripts/*
 DRIVE_README.md
